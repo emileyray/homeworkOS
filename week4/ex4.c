@@ -1,21 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-void swap(int *n1, int *n2){
-    int temp;
-    temp = *n1;
-    *n1 = *n2;
-    *n2 = temp;
-}
+#include <unistd.h>
 
-int main (){
-  int a;
-  int b;
-  scanf("%d", &a);
-  scanf("%d", &b);
-  swap(&a, &b);
-  printf("%d", a);
-  printf(" ");
-  printf("%d", b);
-  return 0;
+int main()
+{
+	char command[50];
+	printf("Type command \"exit\" to exit the program or use another command\n");
+	while(strcmp(command, "exit\n"))
+	{
+		fgets(command, 50, stdin);
+		if (fork() == 0) {
+			system(command);
+			break;
+		}
+	}
+	return 0;
 }
