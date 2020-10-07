@@ -1,0 +1,3 @@
+The main difference is that physical memory does actually refer to RAM
+whle virtual memory is a special teqnique of memory managementa that allows to
+execute perograms that reqire larger memory
