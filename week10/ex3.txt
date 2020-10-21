@@ -1,0 +1,38 @@
+-rwxrwxrwx 1 emileyray emileyray 0 Oct 21 21:09 : checking permissions
+-rw-rw-rw- 1 emileyray emileyray 0 Oct 21 21:10 : execute permission for no one
+-rwxrw-rwx 1 emileyray emileyray 0 Oct 21 21:10 : execute permission for the file owner and  others (not group) 
+-rwxrwxrwx 1 emileyray emileyray 0 Oct 21 21:10 : making permitions of group equal to user permisions
+
+660 775 and 777 are all on octal form 
+and the first digit stands for filw owner permissions,
+the second one stands for group owner permisions,
+and the last one stands for all other users premissions.
+
+Each digit is translated into binary form and then into permissions:
+0 -> 000 -> --- 
+1 -> 001 -> --x
+2 -> 010 -> -w-
+3 -> 011 -> -wx
+4 -> 100 -> r--
+5 -> 101 -> r-x
+6 -> 110 -> rw-
+7 -> 111 -> rwx
+
+where r - read, w - write, and x - execute, so
+
+1. 660 means 
+6 -> 110 -> rw- -> reading and wriring permissions for user
+6 -> 110 -> rw- -> reading and writing permissions for group
+0 -> 000 -> --- -> no permission for others
+
+2. 775 means
+7 -> 111 -> rwx -> all permissions for user
+7 -> 111 -> rwx -> all permissions for group
+5 -> 101 -> r-x -> reading and executing permissions for others
+
+3. 777 means
+7 -> 111 -> rwx -> all permissions for user
+7 -> 111 -> rwx -> all permissions for group
+7 -> 111 -> rwx -> all permissions for others
+
+
