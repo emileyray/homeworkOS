@@ -1,0 +1,7 @@
+The first program outputs "Hello" and a new line two times because of line buffering.
+After forking, each process is given a copy of the data including the buffer that is not flushed yet
+Once each fork prints the new line, they both flush their buffer to the stdout stream.
+
+The second program outputs the string "Hello" with two empty lines after it
+because the first printf call was flushed to the screen before forking as it had a '\n' in it.
+And then, both forks simply print another new line.
