@@ -1,0 +1,11 @@
+Avoidance is a strategy to avoid a deadlock done with Banker’s Algorithm.
+A process is killed with the use of recovery.
+Prevention prevents a deadlock by excluding any of the following conditions: 
+mutual exculsion, hold an wait, no preemption, circular wait.
+
+In Deadlock avoidance we have to anticipate deadlock before it really occurs and ensure
+that the system does not go in unsafe state.It is possible to avoid deadlock if resources
+are allocated carefully. For deadlock avoidance we use Banker’s and Safety algorithm for
+resource allocation purpose. In deadlock avoidance the maximum number of resources of each
+type that will be needed are stated at the beginning of the process.
+Deadlock prevention is more strict that Deadlock Avoidance.

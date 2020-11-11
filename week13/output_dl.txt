@@ -1,0 +1,2 @@
+Process 1 deadlocked.
+Process 4 deadlocked.
